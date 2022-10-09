@@ -28,5 +28,3 @@ def get_stars ():
         tech_product_stars.append(product_stars.string)
     return tech_product_stars
 get_stars()
-
-print(tech_product_name)
