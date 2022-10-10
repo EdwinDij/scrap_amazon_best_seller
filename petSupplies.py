@@ -8,9 +8,11 @@ soup = BeautifulSoup(page.content, "html.parser")
 supplies_product_name = []
 supplies_product_rank = []
 supplies_product_stars = []
+supplies_product_price = []
 rank = soup.find_all('span', class_='zg-bdg-text')
 stars = soup.find_all('span', class_='a-icon-alt')
 names = soup.find_all('div', class_='_cDEzb_p13n-sc-css-line-clamp-3_g3dy1')
+price = soup.find_all('span', class_='_cDEzb_p13n-sc-price_3mJ9Z')
 
 def get_name ():
     for product_name in names:
@@ -29,3 +31,9 @@ def get_stars():
         supplies_product_stars.append(product_stars.string)
     return supplies_product_stars
 get_stars()
+
+def get_price():
+    for product_price in price:
+        supplies_product_price.append(product_price.string)
+    return supplies_product_price
+get_price()

@@ -8,11 +8,12 @@ name = soup.find_all('div', class_='_cDEzb_p13n-sc-css-line-clamp-1_1Fn1y')
 stars = soup.find_all('span', class_='a-icon-alt')
 rank = soup.find_all('span', class_='zg-bdg-text')
 bluray_dvd = soup.find_all('span', class_='a-size-small a-color-secondary a-text-normal')
-
+price = soup.find_all('span', class_='_cDEzb_p13n-sc-price_3mJ9Z')
 dvd_name = []
 dvd_rank = []
 dvd_stars = []
 dvd_type = []
+dvd_price = []
 
 def get_name ():
     for product_name in name:
@@ -37,3 +38,9 @@ def get_type ():
         dvd_type.append(product_type.string)
     return dvd_type
 get_type()
+
+def get_price():
+    for product_price in price:
+        dvd_price.append(product_price.string)
+    return dvd_price
+get_price()
