@@ -1,9 +1,6 @@
 import requests
 from bs4 import BeautifulStoneSoup
 import csv
-##from techProduct import tech_product_name, tech_product_rank, tech_product_stars
-##from dvd import dvd_stars, dvd_name, dvd_rank
-##from petSupplies import supplies_product_name, supplies_product_rank, supplies_product_stars
 
 import techProduct
 import petSupplies
